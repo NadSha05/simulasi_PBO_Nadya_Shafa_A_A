@@ -17,27 +17,7 @@ try {
     die("Koneksi database gagal: " . $e->getMessage());
 }
 
-// ==========================================
-// 2, 3, & 4. ABSTRACTION & ENKAPSULASI
-// ==========================================
 
-abstract class Pendaftaran {
-    // Properti Terenkapsulasi (protected)
-    // Dipetakan dari kolom tabel 'tabel_pendaftaran'
-    protected $id_pendaftaran;
-    protected $nama_calon;
-    protected $asal_sekolah;
-    protected $nilai_ujian;
-    protected $biayaPendaftaranDasar;
-
-    // Konstruktor untuk memetakan data dari database ke properti
-    public function __construct($id, $nama, $asal, $nilai, $biayaDasar) {
-        $this->id_pendaftaran        = $id;
-        $this->nama_calon            = $nama;
-        $this->asal_sekolah          = $asal;
-        $this->nilai_ujian           = $nilai;
-        $this->biayaPendaftaranDasar = $biayaDasar;
-    }
 
     // Metode Abstrak (Wajib diimplementasikan di subclass)
     abstract public function hitungTotalBiaya();
