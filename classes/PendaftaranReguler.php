@@ -12,7 +12,7 @@ class PendaftaranReguler extends Pendaftaran {
     }
 
     public function hitungTotalBiaya() {
-        return $this->biayaPendaftaranDasar * 1.25;
+        return $this->biayaPendaftaranDasar;
     }
 
     public function tampilkanInfoJalur() {
